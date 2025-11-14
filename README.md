@@ -90,5 +90,11 @@ pip install pandas matplotlib seaborn numpy openpyxl
 ```bash
 python main.py
 ```
+3.Visualizations will display automatically. Uncomment plotting functions if necessary.
+
+## License
+
+This project is licensed under the MIT License.  
+© 2025 Tilak Man Gubhaju. Permission is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software. The software is provided "as is" without warranty of any kind.
 
 
