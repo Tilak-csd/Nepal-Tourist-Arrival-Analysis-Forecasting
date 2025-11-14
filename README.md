@@ -43,8 +43,7 @@ Processed CSV files are saved in the `CSV` folder:
 - `Covid_Arrival.csv`
 - `Post_Covid_Arrival.csv`
 - `data.csv`
-
-- 
+-  
 ## Features
 - **Time-based Analysis:**
   - Tourist arrivals before COVID (pre-2020)
