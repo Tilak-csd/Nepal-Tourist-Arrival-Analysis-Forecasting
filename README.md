@@ -81,5 +81,14 @@ Processed CSV files are saved in the `CSV` folder:
 **Required Libraries:**
 ```bash
 pip install pandas matplotlib seaborn numpy openpyxl
+```
+## Usage
+
+1. Place all Excel data files in the `EXCEL` folder.
+2. Run the Python script:
+
+```bash
+python main.py
+```
 
 
