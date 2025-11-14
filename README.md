@@ -28,7 +28,6 @@ The analysis uses the following datasets:
 - **Monthly Arrival Data (1995 - 2023):** Monthly tourist arrivals across different years.
 - **Arrival by Country (2014 - 2023):** Tourist arrivals in Nepal by nationality.
 
-All datasets are stored in the `EXCEL` folder:
 ## Dataset Files
 
 The project uses the following Excel files, stored in the `EXCEL` folder:
@@ -44,4 +43,43 @@ Processed CSV files are saved in the `CSV` folder:
 - `Covid_Arrival.csv`
 - `Post_Covid_Arrival.csv`
 - `data.csv`
+
+- 
+## Features
+- **Time-based Analysis:**
+  - Tourist arrivals before COVID (pre-2020)
+  - During COVID (2020-2022)
+  - After COVID (post-2022)
+- **Average Tourist Arrivals:** Computed per COVID timeline.
+- **Country Breakdown:** Tourist arrivals per nationality.
+- **Growth Rate Analysis:** Year-over-Year (YoY) growth visualization.
+- **Forecasting:** Predicting tourist arrivals for the next five years using Holt’s Linear Trend method.
+
+## Data Cleaning & Processing
+- Removed duplicates and missing values.
+- Filled missing country data with `0` for calculations.
+- Converted year column to datetime format.
+- Categorized years into pre-COVID, COVID, and post-COVID for trend analysis.
+
+## Visualizations
+- **Bar Plot:** Tourist arrivals by COVID timeline.
+- **Pie Chart:** Average tourist arrivals by COVID timeline.
+- **Line Plot:** Growth rate over years.
+- **Bar Plot:** Tourist arrivals per country.
+
+*All plots use formatted y-axis values for better readability (millions or thousands).*
+
+## Tourist Arrival Forecasting
+- **Method:** Holt’s Linear Trend Method
+- Forecasting is based on recent years’ data (2019-2024) with level (`L`) and trend (`T`) calculation.
+- Multi-step forecast is performed to predict arrivals for 2025.
+- Visualization shows actual vs forecasted tourist numbers.
+
+## Installation & Requirements
+**Python Version:** 3.9+  
+
+**Required Libraries:**
+```bash
+pip install pandas matplotlib seaborn numpy openpyxl
+
 
