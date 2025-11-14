@@ -96,6 +96,7 @@ pip install pandas matplotlib seaborn numpy openpyxl
 ## License
 
 This project is licensed under the MIT License.  
-© 2025 Tilak Man Gubhaju. Permission is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software. The software is provided "as is" without warranty of any kind.
+© 2025 Tilak Man Gubhaju.
+Permission is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software. The software is provided "as is" without warranty of any kind.
 
 
