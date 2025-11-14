@@ -29,4 +29,19 @@ The analysis uses the following datasets:
 - **Arrival by Country (2014 - 2023):** Tourist arrivals in Nepal by nationality.
 
 All datasets are stored in the `EXCEL` folder:
+## Dataset Files
+
+The project uses the following Excel files, stored in the `EXCEL` folder:
+
+- `data.xlsx`
+- `1995 - 2005 monthly arrival list.xlsx`
+- `2006 - 2023 monthly arrival list.xlsx`
+- `arrival.xlsx`
+
+Processed CSV files are saved in the `CSV` folder:
+
+- `Pre_Covid_Arrival.csv`
+- `Covid_Arrival.csv`
+- `Post_Covid_Arrival.csv`
+- `data.csv`
 
