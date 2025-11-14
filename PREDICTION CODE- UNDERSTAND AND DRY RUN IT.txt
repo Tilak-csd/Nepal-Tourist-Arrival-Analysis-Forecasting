@@ -1,0 +1,73 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# -------------------------------
+# Prepare the data
+# -------------------------------
+data = [2000, 2200, 2100, 2400, 2600]  # tourist arrivals
+df = pd.DataFrame({'Arrival': data})
+
+# -------------------------------
+# Set parameters and initialize
+# -------------------------------
+alpha = 0.5  # level smoothing
+beta = 0.4   # trend smoothing
+
+# Initialize Level and Trend
+L = [df['Arrival'][0]]                   # L1 = X1
+T = [df['Arrival'][1] - df['Arrival'][0]]  # T1 = X2 - X1
+
+# Initialize forecast list
+forecast = []
+
+# -------------------------------
+# Compute Level, Trend, Forecast
+# -------------------------------
+for t in range(1, len(df)):
+    # One-step forecast
+    f = L[-1] + T[-1]
+    forecast.append(f)
+    
+    # Update Level
+    L_new = alpha * df['Arrival'][t] + (1 - alpha) * (L[-1] + T[-1])
+    L.append(L_new)
+    
+    # Update Trend
+    T_new = beta * (L_new - L[-1]) + (1 - beta) * T[-1]
+    T.append(T_new)
+
+# -------------------------------
+# Multi-step Forecasts (X6, X7)
+# -------------------------------
+f_X6 = L[-1] + 1*T[-1]   # h=1 forecast
+forecast.append(f_X6)
+
+f_X7 = L[-1] + 2*T[-1]   # h=2 forecast
+forecast.append(f_X7)
+
+# -------------------------------
+#   Create combined DataFrame
+# -------------------------------
+df_forecast = pd.DataFrame({
+    'Actual': df['Arrival'] + [np.nan, np.nan],  # extend for X6, X7
+    'Level': L,
+    'Trend': T,
+    'Forecast': forecast
+})
+
+print(df_forecast)
+
+# -------------------------------
+# Visualization
+# -------------------------------
+plt.figure(figsize=(10,5))
+plt.plot(df_forecast['Actual'], marker='o', label='Actual')
+plt.plot(df_forecast['Level'], marker='s', label='Level')
+plt.plot(df_forecast['Forecast'], marker='x', linestyle='--', label='Forecast')
+plt.title('Holt Linear Trend Forecast')
+plt.xlabel('Time')
+plt.ylabel('Tourist Arrival')
+plt.legend()
+plt.grid(True)
+plt.show()
