@@ -88,9 +88,10 @@ pip install pandas matplotlib seaborn numpy openpyxl
 2. Run the Python script:
 
 ```bash
-python main.py
+  python main.py
 ```
-3.Visualizations will display automatically. Uncomment plotting functions if necessary.
+
+3. Visualizations will display automatically. Uncomment plotting functions if necessary.
 
 ## License
 
